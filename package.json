@@ -1,0 +1,30 @@
+{
+    "devDependencies": {
+        "acorn": "^6.0.5",
+        "browserify": "^16.2.3",
+        "eslint": "^5.10.0",
+        "eslint-config-prettier": "^3.3.0",
+        "eslint-plugin-prettier": "^3.0.0",
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^6.0.0",
+        "gulp-clean-css": "^4.0.0",
+        "gulp-eslint": "^5.0.0",
+        "gulp-header": "^2.0.7",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-minify": "^3.1.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-util": "^3.0.8",
+        "gulp-watch": "^5.0.1",
+        "prettier": "1.15.3",
+        "shell-quote": "^1.6.1",
+        "vinyl-buffer": "^1.0.1",
+        "vinyl-source-stream": "^2.0.0",
+        "vue": "^2.5.22"
+    },
+    "dependencies": {
+        "mailtoui": "^0.1.14"
+    },
+    "scripts": {
+        "lint": "eslint ."
+    }
+}
