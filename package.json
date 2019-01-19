@@ -2,9 +2,9 @@
     "devDependencies": {
         "acorn": "^6.0.5",
         "browserify": "^16.2.3",
-        "eslint": "^5.10.0",
-        "eslint-config-prettier": "^3.3.0",
-        "eslint-plugin-prettier": "^3.0.0",
+        "eslint": "^5.12.1",
+        "eslint-config-prettier": "^3.5.0",
+        "eslint-plugin-prettier": "^3.0.1",
         "gulp": "^4.0.0",
         "gulp-autoprefixer": "^6.0.0",
         "gulp-clean-css": "^4.0.0",
@@ -22,7 +22,7 @@
         "vue": "^2.5.22"
     },
     "dependencies": {
-        "mailtoui": "^0.1.14"
+        "mailtoui": "^0.2.0"
     },
     "scripts": {
         "lint": "eslint ."
