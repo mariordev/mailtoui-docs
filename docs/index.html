@@ -31,7 +31,7 @@
                             <h1 class="font-black text-5xl mb-2">MailtoUI</h1>
 
                             <p class="text-base text-grey-dark mb-4">
-                                v<span id="version"></span> &nbsp; 
+                                v<span id="version">{{ version }}</span> &nbsp; 
                                 <span class="text-sm bg-grey text-white px-1 rounded-sm">13 KB</span>
                             </p>
                             
@@ -166,7 +166,7 @@
                                         &lt;body&gt;
                                             ...
                                             ...
-                                            &lt;script src=&quot;https://cdn.jsdelivr.net/npm/mailtoui@latest/dist/mailtoui-min.js&quot;&gt;&lt;/script&gt;
+                                            &lt;script src=&quot;https://cdn.jsdelivr.net/npm/mailtoui@{{ version }}/dist/mailtoui-min.js&quot;&gt;&lt;/script&gt;
                                         &lt;/body&gt;
                                     </code>
                                 </pre>
@@ -175,7 +175,7 @@
                             <div class="mb-16">
                                 <h3 class="mb-6 text-grey-darkest">DOWNLOAD</h3>
 
-                                <p>Alternatively, you can <a href="https://cdn.jsdelivr.net/npm/mailtoui@latest/dist/mailtoui-min.js" target="_blank">download mailtoui-min.js</a> and load it at the bottom of your page, just before the closing <code>&lt;/body&gt;</code> tag.</p>
+                                <p>Alternatively, you can <a :href="downloadURL" target="_blank">download mailtoui-min.js</a> and load it at the bottom of your page, just before the closing <code>&lt;/body&gt;</code> tag.</p>
 
                                 <pre class="language-html">
                                     <code>
@@ -198,11 +198,11 @@
                                         &lt;head&gt;
                                             ...
                                             ...
-                                            &lt;script src=&quot;your/path/to/mailtoui.js&quot; defer&gt;&lt;/script&gt;
+                                            &lt;script src=&quot;your/path/to/mailtoui-min.js&quot; defer&gt;&lt;/script&gt;
 
                                             &lt;!-- OR --&gt;
 
-                                            &lt;script src=&quot;your/path/to/mailtoui.js&quot; async=false&gt;&lt;/script&gt;
+                                            &lt;script src=&quot;your/path/to/mailtoui-min.js&quot; async=false&gt;&lt;/script&gt;
                                         &lt;/head&gt;
                                         &lt;body&gt;
                                     </code>
@@ -216,13 +216,11 @@
 
                                 <pre class="language-bash mb-16">
                                     <code>
-                                        # install the latest version using npm
-                                        npm i mailtoui
-                                        
-                                        # OR
+                                        # install using npm
+                                        npm i mailtoui@{{ version }}
 
-                                        # install the latest version using yarn
-                                        yarn add mailtoui
+                                        # or using yarn
+                                        yarn add mailtoui@{{ version }}
                                     </code>
                                 </pre>
                             </div>
@@ -335,7 +333,7 @@
                                     &lt;body&gt;
                                         ...
                                         ...
-                                        &lt;script src=&quot;mailtoui.js&quot; data-options='{ &quot;autoClose&quot;: false }'&gt;&lt;/script&gt;
+                                        &lt;script src=&quot;mailtoui-min.js&quot; data-options='{ &quot;autoClose&quot;: false }'&gt;&lt;/script&gt;
                                     &lt;/body&gt;
                                 </code>
                             </pre>
@@ -350,7 +348,7 @@
                                         &lt;a class=&quot;superhero&quot; href=&quot;mailto:thor@example.com&quot;&gt;Thor&lt;/a&gt;
                                         ...
                                         ...
-                                        &lt;script src=&quot;mailtoui.js&quot; data-options='{ &quot;linkClass&quot;: "superhero" }'&gt;&lt;/script&gt;
+                                        &lt;script src=&quot;mailtoui-min.js&quot; data-options='{ &quot;linkClass&quot;: "superhero" }'&gt;&lt;/script&gt;
                                     &lt;/body&gt;
                                 </code>
                             </pre>
@@ -447,14 +445,14 @@
                                 <thead>
                                     <tr class="text-grey-dark text-lg">
                                         <th class="border-r p-4">EVENT</th>
-                                        <th class="border-r p-4">ORIGIN ELEMENT ID (DEFAULT)</th>
+                                        <th class="border-r p-4">ORIGIN ID</th>
                                         <th class="p-4 w-1/3">DESCRIPTION</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="border-r p-4 align-top">
-                                            <code><a class="text-grey-darkest" href="#event-open">open</a></code>
+                                            <code>open</code>
                                         </td>
                                         <td class="border-r p-4 align-top">
                                             <code class="block">mailtoui-modal</code>
@@ -465,7 +463,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border-r p-4 align-top">
-                                            <code><a class="text-grey-darkest" href="#event-close">close</a></code>
+                                            <code>close</code>
                                         </td>
                                         <td class="border-r p-4 align-top">
                                             <code class="block">mailtoui-modal</code>
@@ -476,7 +474,7 @@
                                     </tr>
                                     <tr>
                                         <td class="border-r p-4 align-top">
-                                            <code><a class="text-grey-darkest" href="#event-compose">compose</a></code>
+                                            <code>compose</code>
                                         </td>
                                         <td class="border-r p-4 align-top">
                                             <code class="block mb-3">mailtoui-client-gmail</code>
@@ -489,7 +487,9 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#event-copy">copy</a></code></td>
+                                        <td class="border-r p-4 align-top">
+                                            <code>copy</code>
+                                        </td>
                                         <td class="border-r p-4 align-top">
                                             <code class="block">mailtoui-copy-email-address</code>
                                         </td>
@@ -644,7 +644,9 @@
                             <img class="rounded-full h-24 w-24" src="assets/img/mr.jpg" alt="Mario Rodriguez">
                         </a>
                         <div class="pl-4 text-left">
-                            <a class="block mb-2 text-grey-darkest no-underline hover:underline" href="https://twitter.com/mariordev">Mario Rodriguez</a>
+                            <a class="block mb-2 text-grey-darkest text-lg no-underline hover:underline" href="https://twitter.com/mariordev">
+                                Mario Rodriguez
+                            </a>
                             <a class="block mb-2 text-blue no-underline hover:underline" href="https://twitter.com/mariordev">@mariordev</a>
                             <span class="text-sm text-grey-dark">Made with &hearts; in California</span>
                         </div>

@@ -24,15 +24,6 @@ function setDarkTheme() {
 }
 
 /**
- * Embed version number on docs page.
- */
-function embedVersion() {
-    const mailtouiPackageJson = require('../../../node_modules/mailtoui/package.json');
-
-    window.document.getElementById('version').innerHTML = mailtouiPackageJson.version;
-}
-
-/**
  * Proceed only if the DOM is loaded and ready.
  *
  * @param  {Function}   fn  The function to be executed when DOM is ready.
@@ -51,15 +42,13 @@ function domReady(fn) {
  */
 domReady(function() {
     const Vue = require('../../../node_modules/vue/dist/vue.js');
+    const mailtouiPackageJson = require('../../../node_modules/mailtoui/package.json');
     const MailtoUI = require('../../../node_modules/mailtoui/dist/mailtoui-min.js');
-
-    // MailtoUI.run();
-    // embedVersion();
-    // setDarkTheme();
 
     var app = new Vue({
         el: '#app',
         data: {
+            version: '',
             emailSyntax: '{{ email }}',
             email: 'supergirl@example.com',
         },
@@ -67,11 +56,15 @@ domReady(function() {
             mailtoHref: function() {
                 return 'mailto:' + this.email;
             },
+            downloadURL: function() {
+                return 'https://cdn.jsdelivr.net/npm/mailtoui@' + this.version + '/dist/mailtoui-min.js';
+            },
         },
         mounted() {
-            // MailtoUI.run({ autoClose: false });
+            this.version = mailtouiPackageJson.version;
+
             MailtoUI.run();
-            embedVersion();
+
             setDarkTheme();
         },
     });
