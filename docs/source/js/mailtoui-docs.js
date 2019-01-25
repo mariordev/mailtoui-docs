@@ -41,7 +41,7 @@ function domReady(fn) {
  * Run when DOM is ready.
  */
 domReady(function() {
-    const Vue = require('../../../node_modules/vue/dist/vue.js');
+    const Vue = require('../../../node_modules/vue/dist/vue.min.js');
     const mailtouiPackageJson = require('../../../node_modules/mailtoui/package.json');
     const MailtoUI = require('../../../node_modules/mailtoui/dist/mailtoui-min.js');
 
