@@ -11,7 +11,6 @@ body {
 
 p a {
     color: #3490DC;
-    font-weight: bold;
 }
 
 pre, code {
@@ -64,6 +63,7 @@ table {
     color: #fff;
 }
 
+.dark-theme .mailtoui-modal-close:focus,
 .dark-theme .mailtoui-modal-close:hover {
     color: #fff;
 }
@@ -72,26 +72,33 @@ table {
     background-color: #373b41;
 }
 
-.dark-theme .mailtoui-client:focus .mailtoui-label {
+.dark-theme .mailtoui-button:focus .mailtoui-button-content {
     background-color: #D8DCDF;
     color: #333;
 }
 
-.dark-theme .mailtoui-label,
-.dark-theme .mailtoui-copy-button {
+.dark-theme .mailtoui-button-content,
+.dark-theme .mailtoui-button-copy {
     background-color: #63676b;
     color: #fff;
 }
 
-.dark-theme .mailtoui-label:hover,
-.dark-theme .mailtoui-label:focus,
-.dark-theme .mailtoui-copy-button:hover,
-.dark-theme .mailtoui-copy-button:focus {
+.dark-theme .mailtoui-button-content:hover,
+.dark-theme .mailtoui-button-content:focus,
+.dark-theme .mailtoui-button-copy:hover,
+.dark-theme .mailtoui-button-copy:focus {
     background-color: #D8DCDF;
     color: #333;
 }
 
-.dark-theme .mailtoui-copy-email-address {
+.dark-theme .mailtoui-button-copy-clicked,
+.dark-theme .mailtoui-button-copy-clicked:hover,
+.dark-theme .mailtoui-button-copy-clicked:focus {
+    background-color: #1F9D55;
+    color: #fff;
+}
+
+.dark-theme .mailtoui-email-address {
     background-color: #909295;
     color: #21262c;
 }

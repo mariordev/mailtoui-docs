@@ -32,7 +32,7 @@
 
                             <p class="text-base text-grey-dark mb-4">
                                 v<span id="version">{{ version }}</span> &nbsp; 
-                                <span class="text-sm bg-grey text-white px-1 rounded-sm">14 KB</span>
+                                <span class="text-sm bg-grey text-white px-1 rounded-sm">18 KB</span>
                             </p>
                             
                             <p class="text-2xl text-grey-darkest mb-16">A simple way to enhance your mailto links with a convenient user interface.</p>
@@ -298,7 +298,7 @@
 
                             <p>Options allow you to easily change the behavior and the appearance of MailtoUI to fit your needs.</p>
 
-                            <p>Options can be set via a <code>data-options</code> attribute with a <i>JSON string</i> in the <code>&lt;script&gt;</code> tag, <strong><i>or</i></strong> via a <i>JavaScript object</i> argument passed to the MailtoUI <code>run()</code> method.</p>
+                            <p>Options can be set via a <code>data-options</code> attribute with a JSON string in the <code>&lt;script&gt;</code> tag, <strong><i>or</i></strong> via a JavaScript object argument passed to the MailtoUI <code>run()</code> method.</p>
 
                             <p>The following options are supported:</p>
 
@@ -314,125 +314,168 @@
                                 <tbody>
                                     <tr>
                                         <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#autoclose">autoClose</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>boolean</code></td>
+                                        <td class="border-r p-4 align-top"><code>Boolean</code></td>
                                         <td class="border-r p-4 align-top"><code>true</code></td>
                                         <td class="p-4 align-top"><p>If set to <i>true</i>, the MailtoUI modal is closed automatically when an email client choice is clicked. It has no effect when clicking on the Copy button.</p></td>
                                     </tr>
                                     <tr>
                                         <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#linkclass">linkClass</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>mailtoui</code></td>
                                         <td class="p-4 align-top"><p>The class name used on mailto links attached to MailtoUI.</p></td>
                                     </tr>
                                     <tr>
                                         <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#title">title</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>Compose new email with</code></td>
                                         <td class="p-4 align-top"><p>The title of the modal.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonText1">buttonText1</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-text">buttonText1</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>Gmail in browser</code></td>
-                                        <td class="p-4 align-top"><p>Text for button 1.</p></td>
+                                        <td class="p-4 align-top"><p>Text displayed on button 1.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonText2">buttonText2</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-text">buttonText2</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>Outlook in browser</code></td>
-                                        <td class="p-4 align-top"><p>Text for button 2.</p></td>
+                                        <td class="p-4 align-top"><p>Text displayed on button 2.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonText3">buttonText3</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-text">buttonText3</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>Yahoo in browser</code></td>
-                                        <td class="p-4 align-top"><p>Text for button 3.</p></td>
+                                        <td class="p-4 align-top"><p>Text displayed on button 3.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonText4">buttonText4</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-text">buttonText4</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>Default email app</code></td>
-                                        <td class="p-4 align-top"><p>Text for button 4.</p></td>
+                                        <td class="p-4 align-top"><p>Text displayed on button 4.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonTextCopy">buttonTextCopy</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-text">buttonTextCopy</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>Copy</code></td>
-                                        <td class="p-4 align-top"><p>Text for Copy button.</p></td>
+                                        <td class="p-4 align-top"><p>Text displayed on Copy button.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonTextCopyAction">buttonTextCopyAction</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-text">buttonTextCopyAction</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>Copied!</code></td>
-                                        <td class="p-4 align-top"><p>Text to toggle Copy button when clicked.</p></td>
+                                        <td class="p-4 align-top"><p>Text displayed on Copy button when clicked.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonIcon1">buttonIcon1</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-icon">buttonIcon1</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>[embedded]</code></td>
                                         <td class="p-4 align-top"><p>URL to an SVG file for button 1 icon.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonIcon2">buttonIcon2</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-icon">buttonIcon2</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>[embedded]</code></td>
                                         <td class="p-4 align-top"><p>URL to an SVG file for button 2 icon.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonIcon3">buttonIcon3</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-icon">buttonIcon3</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>[embedded]</code></td>
                                         <td class="p-4 align-top"><p>URL to an SVG file for button 3 icon.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonIcon4">buttonIcon4</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-icon">buttonIcon4</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>[embedded]</code></td>
                                         <td class="p-4 align-top"><p>URL to an SVG file for button 4 icon.</p></td>
                                     </tr>
                                     <tr>
-                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#buttonIconCopy">buttonIconCopy</a></code></td>
-                                        <td class="border-r p-4 align-top"><code>string</code></td>
+                                        <td class="border-r p-4 align-top"><code><a class="text-grey-darkest" href="#button-icon">buttonIconCopy</a></code></td>
+                                        <td class="border-r p-4 align-top"><code>String</code></td>
                                         <td class="border-r p-4 align-top"><code>[embedded]</code></td>
                                         <td class="p-4 align-top"><p>URL to an SVG file for Copy button icon.</p></td>
                                     </tr>
                                 </tbody>
                             </table>
 
-                            <h2 id="autoclose" class="mb-4"><code>autoClose</code></h2>
+                            <div class="mb-16">
+                                <h2 id="autoclose" class="mb-4"><code>autoClose</code></h2>
 
-                            <p>If you set <code>autoClose</code> to false, the MailtoUI interface will remain open after clicking on any of the email client  choices.</p>
+                                <p>If you set <code>autoClose</code> to false, the MailtoUI interface will remain open after clicking on any of the email client  choices.</p>
 
-                            <pre class="language-html mb-16">
-                                <code>
-                                    &lt;body&gt;
-                                        ...
-                                        ...
-                                        &lt;script src=&quot;mailtoui-min.js&quot; data-options='{ &quot;autoClose&quot;: false }'&gt;&lt;/script&gt;
-                                    &lt;/body&gt;
-                                </code>
-                            </pre>
-
-                            <h2 id="linkclass" class="mb-4"><code>linkClass</code></h2>
-
-                            <p>Use the <code>linkClass</code> option to change the class used to attach mailto links to MailtoUI. This can be handy in the unlikely event that the default <code>mailtoui</code> class collides with your own CSS code.</p>
-
-                            <pre class="language-html mb-10">
-                                <code>
-                                    &lt;body&gt;
-                                        &lt;a class=&quot;superhero&quot; href=&quot;mailto:thor@example.com&quot;&gt;Thor&lt;/a&gt;
-                                        ...
-                                        ...
-                                        &lt;script src=&quot;mailtoui-min.js&quot; data-options='{ &quot;linkClass&quot;: "superhero" }'&gt;&lt;/script&gt;
-                                    &lt;/body&gt;
-                                </code>
-                            </pre>
-
-                            <div class="bg-yellow-lighter text-yellow-darkest border-yellow-dark border-b-2 px-8 py-6 mb-16">
-                                <p class="mb-0">If you set a custom link class, be sure to use the same class on your mailto link(s). For example, if you set the linkClass option to <code>superhero</code>, your mailto link(s) must contain the class <code>superhero</code>, as shown above.</p>
+                                <pre class="language-html">
+                                    <code>
+                                        &lt;body&gt;
+                                            ...
+                                            ...
+                                            &lt;script src=&quot;mailtoui-min.js&quot; data-options='{ &quot;autoClose&quot;: false }'&gt;&lt;/script&gt;
+                                        &lt;/body&gt;
+                                    </code>
+                                </pre>
                             </div>
 
-                            
+
+                            <div class="mb-16">
+                                <h2 id="linkclass" class="mb-4"><code>linkClass</code></h2>
+
+                                <p>Use the <code>linkClass</code> option to change the class used to attach mailto links to MailtoUI. This can be handy in the unlikely event that the default <code>mailtoui</code> class collides with your own CSS code.</p>
+
+                                <pre class="language-html mb-8">
+                                    <code>
+                                        &lt;body&gt;
+                                            &lt;a class=&quot;superhero&quot; href=&quot;mailto:thor@example.com&quot;&gt;Thor&lt;/a&gt;
+                                            ...
+                                            ...
+                                            &lt;script src=&quot;mailtoui-min.js&quot; data-options='{ &quot;linkClass&quot;: "superhero" }'&gt;&lt;/script&gt;
+                                        &lt;/body&gt;
+                                    </code>
+                                </pre>
+
+                                <div class="bg-yellow-lighter text-yellow-darkest border-yellow-dark border-b-2 px-8 py-6 mb-16">
+                                    <p class="mb-0">If you set a custom link class, be sure to use the same class on your mailto link(s). For example, if you set the linkClass option to <code>superhero</code>, your mailto link(s) must contain the class <code>superhero</code>, as shown above.</p>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-16">
+                                <h2 id="button-text" class="mb-4"><code>buttonText{#}</code></h2>
+                                
+                                <p>The <code>buttonText{#}</code> options accept a string to be used as the text displayed on the button. For example, to change the text displayed on the "Outlook" button, use the <code>buttonText2</code> option.</p>
+
+                                <pre class="language-html">
+                                    <code>
+                                        &lt;body&gt;
+                                            ...
+                                            ...
+                                            &lt;script src=&quot;mailtoui-min.js&quot; data-options='{ &quot;buttonText2&quot;: "Outlook app" }'&gt;&lt;/script&gt;
+                                        &lt;/body&gt;
+                                    </code>
+                                </pre>
+                            </div>
+
+
+                            <div class="mb-10">
+                                <h2 id="button-icon" class="mb-4"><code>buttonIcon{#}</code></h2>
+                                
+                                <p>The <code>buttonIcon{#}</code> options accept a URL that points to a valid SVG file to be used as the button icon. For example, if you want to change the icon used on the Copy button, use the option <code>buttonIconCopy</code>.</p>
+
+                                <pre class="language-html mb-8">
+                                    <code>
+                                        &lt;body&gt;
+                                            ...
+                                            ...
+                                            &lt;script src=&quot;mailtoui-min.js&quot; data-options='{ &quot;buttonIconCopy&quot;: "/path/to/your/other-icon.svg" }'&gt;&lt;/script&gt;
+                                        &lt;/body&gt;
+                                    </code>
+                                </pre>
+
+                                <div class="bg-yellow-lighter text-yellow-darkest border-yellow-dark border-b-2 px-8 py-6 mb-16">
+                                    <p class="mb-0">The URL can be absolute or relative. An absolute URL must be in your own domain. Attempting to use an SVG file hosted on a different domain will result in an CORS policy violation and will not work. In other words, you must host your own SVG file(s).</p>
+                                </div>
+                            </div>
+
+
                             <h3 class="mb-6">Setting options at run time</h3>
 
                             <p>When running MailtoUI manually, any of the options described above can be set by passing a JavaScript object argument to the MailtoUI <code>run()</code> method.</p>
@@ -453,7 +496,7 @@
 
                             <p><a id="email-dark" class="mailtoui" href="mailto:darth.vader@example.com?subject=Welcome%20to%20the%20Dark%20Side">Try it yourself!</a></p>
 
-                            <pre class="language-css mb-10">
+                            <pre class="language-css mb-8">
                                 <code>
                                     /* Dark theme */
 
@@ -461,43 +504,51 @@
                                         background-color: rgba(250,250,250,0.5);
                                         color: #fff;
                                     }
-
+                        
                                     .mailtoui-modal-head {
                                         background-color: #21262C;
                                     }
-
+                        
                                     .mailtoui-modal-title {
                                         color: #fff;
                                     }
-
+                        
+                                    .mailtoui-modal-close:focus,
                                     .mailtoui-modal-close:hover {
                                         color: #fff;
                                     }
-
+                        
                                     .mailtoui-modal-body {
                                         background-color: #373b41;
                                     }
-
-                                    .mailtoui-client:focus .mailtoui-label {
+                        
+                                    .mailtoui-button:focus .mailtoui-button-content {
                                         background-color: #D8DCDF;
                                         color: #333;
                                     }
-
-                                    .mailtoui-label,
-                                    .mailtoui-copy-button {
+                        
+                                    .mailtoui-button-content,
+                                    .mailtoui-button-copy {
                                         background-color: #63676b;
                                         color: #fff;
                                     }
-
-                                    .mailtoui-label:hover,
-                                    .mailtoui-label:focus,
-                                    .mailtoui-copy-button:hover,
-                                    .mailtoui-copy-button:focus {
+                        
+                                    .mailtoui-button-content:hover,
+                                    .mailtoui-button-content:focus,
+                                    .mailtoui-button-copy:hover,
+                                    .mailtoui-button-copy:focus {
                                         background-color: #D8DCDF;
                                         color: #333;
                                     }
 
-                                    .mailtoui-copy-email-address {
+                                    .mailtoui-button-copy-clicked,
+                                    .mailtoui-button-copy-clicked:hover,
+                                    .mailtoui-button-copy-clicked:focus {
+                                        background-color: #1F9D55;
+                                        color: #fff;
+                                    }
+                        
+                                    .mailtoui-email-address {
                                         background-color: #909295;
                                         color: #21262c;
                                     }
@@ -552,10 +603,10 @@
                                             <code>compose</code>
                                         </td>
                                         <td class="border-r p-4 align-top">
-                                            <code class="block mb-3">mailtoui-client-gmail</code>
-                                            <code class="block mb-3">mailtoui-client-outlook</code>
-                                            <code class="block mb-3">mailtoui-client-yahoo</code>
-                                            <code class="block mb-3">mailtoui-client-default</code>
+                                            <code class="block mb-3">mailtoui-button-1</code>
+                                            <code class="block mb-3">mailtoui-button-2</code>
+                                            <code class="block mb-3">mailtoui-button-3</code>
+                                            <code class="block mb-3">mailtoui-button-4</code>
                                         </td>
                                         <td class="p-4 align-top">
                                             <p>An email client choice has been clicked.</p>
@@ -566,7 +617,7 @@
                                             <code>copy</code>
                                         </td>
                                         <td class="border-r p-4 align-top">
-                                            <code class="block">mailtoui-copy-email-address</code>
+                                            <code class="block">mailtoui-email-address</code>
                                         </td>
                                         <td class="p-4 align-top">
                                             <p>The email address has been copied to the clipboard.</p>
@@ -577,9 +628,9 @@
 
                             <p>For example, if you want to perform some action when the "Gmail" button is clicked, you can attach an event listener to that button to listen for the <code>compose</code> event. Like so:</p>
 
-                            <pre class="language-js mb-10">
+                            <pre class="language-js mb-8">
                                 <code>
-                                    var gmail = window.document.getElementById('mailtoui-client-gmail');
+                                    var gmail = window.document.getElementById('mailtoui-button-1');
 
                                     gmail.addEventListener(
                                         'compose',

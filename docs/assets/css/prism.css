@@ -44,9 +44,14 @@ pre[class*="language-"] {
 /* Inline code */
 :not(pre) > p code,
 :not(pre) > ul code {
-    background-color: #F1F5F8;
-    color: #38A89D;
-    font-weight: bold;
+	background-color: #e7e7e7;
+    color: #111;
+	padding: .1em .2em;
+}
+
+:not(pre) > .bg-yellow-lighter p code,
+:not(pre) > .bg-yellow-lighter ul code {
+	background-color: #FCFBEB;
 }
 
 :not(pre) > code[class*="language-"] {
