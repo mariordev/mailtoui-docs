@@ -19,10 +19,10 @@
         "shell-quote": "^1.6.1",
         "vinyl-buffer": "^1.0.1",
         "vinyl-source-stream": "^2.0.0",
-        "vue": "^2.6.3"
+        "vue": "^2.6.6"
     },
     "dependencies": {
-        "mailtoui": "^1.0.0"
+        "mailtoui": "^1.0.1"
     },
     "scripts": {
         "lint": "eslint ."
