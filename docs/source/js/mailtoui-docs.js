@@ -63,7 +63,7 @@ domReady(function() {
         mounted() {
             this.version = mailtouiPackageJson.version;
 
-            MailtoUI.run();
+            MailtoUI.run({ disableOnMobile: false });
 
             setDarkTheme();
         },
