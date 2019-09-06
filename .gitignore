@@ -4,3 +4,5 @@
 /dist/mailtoui.css
 .DS_Store
 .eslintrc.json
+compile
+serve
